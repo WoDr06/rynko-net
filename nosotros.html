@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Nosotros - RYNKO</title>
+  <link rel="stylesheet" href="estilos copy.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">RYNKO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1>Bienvenido al Nosotros</h1>
+  <p>Muy pronto: todo tu flow aquí 🔥</p>
+  <script>
+    // Suaviza la entrada
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+    });
+  
+    // Suaviza la salida
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const url = this.getAttribute('href');
+        if (url && !url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = url;
+          }, 500); // Tiempo que coincide con el CSS
+        }
+      });
+    });
+  </script>
+</body>
+</html>

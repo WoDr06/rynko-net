@@ -1,0 +1,242 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color:#000000;
+  text-align: center;
+  flex-grow: 1;
+  margin-left: 305px;
+}
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+nav a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+nav a:hover {
+  color: #8e948e;
+}
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  background-image: url('https://via.placeholder.com/1600x600');
+  background-size: cover;
+  background-position: center;
+  color: white;
+}
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero p {
+  text-align: center;
+  font-weight: 800;
+  font-size: 60px;
+  margin-bottom: 100px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin-top: 100px;
+}
+.btn {
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+}
+.productos {
+  padding: 60px 5%;
+  text-align: center;
+}
+.productos h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+.producto {
+  background-color: #eff0e4;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+.producto p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 5px;
+}
+.producto button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  color: #363636;
+}
+footer .redes a {
+  color: #363636;
+  text-decoration: none;
+  margin: 0 10px;
+}
+footer .redes a:hover {
+  color: white;
+}
+/* Fade-out animación */
+body.fade-out {
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body {
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+.hero {
+  height: 100vh; /* que ocupe toda la pantalla */
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  padding: 2rem;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* oscurece un poco para que se lea el texto */
+  z-index: 1;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+html {
+  scroll-behavior: smooth;
+}
+/* Estilos generales para la sección de la historia */
+.story {
+  background-color: #121212; /* Fondo oscuro para mantener la elegancia */
+  color: white;
+  padding: 100px 20px; /* Espaciado para dar margen */
+}
+
+.story-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.story-text {
+  flex: 1;
+  max-width: 50%;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.story h1 {
+  font-size: 3rem;
+  font-family: 'Playfair Display', serif;
+  font-weight: 600;
+  margin-bottom: 20px;
+  line-height: 1.4;
+}
+
+.story p {
+  font-size: 1.25rem;
+  font-family: 'Georgia', serif;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+/* Imagen de la historia */
+.story-image {
+  flex: 1;
+  max-width: 50%;
+  position: relative;
+}
+
+.story-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: transform 0.3s ease-out;
+}
+
+/* Efecto de parallax */
+.story-container:hover .story-image img {
+  transform: scale(1.1); /* La imagen se acerca un poco al hacer hover */
+}
+
+@media (max-width: 768px) {
+  .story-container {
+      flex-direction: column;
+  }
+
+  .story-text {
+      max-width: 100%;
+      padding-right: 0;
+  }
+
+  .story-image {
+      max-width: 100%;
+      margin-top: 20px;
+  }
+}

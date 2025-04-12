@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RYNKO - Estilo Urbano</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="fade-out">
+  <header>
+    <div class="logo">RYNKO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="hero" style="background-image: url('stile-syre.png');">
+    <div class="hero-contenido">
+      <h1>Estilo Urbano. Flow Elegante.</h1>
+      <p>La ropa que te representa, sin filtros.</p>
+      <a href="catalogo.html" class="btn">Ver colección</a>
+    </div>
+  </section>
+
+  <section class="productos">
+    <h2>Nuestros favoritos</h2>
+    <div class="grid-productos">
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x400" alt="Producto 1">
+        <h3>Chaqueta Oversize</h3>
+        <p>S/ 129.90</p>
+        <button>Ver más</button>
+      </div>
+      <div class="producto">
+        <img src="https://via.placeholder.com/300x400" alt="Producto 2">
+        <h3>Jogger Street</h3>
+        <p>S/ 99.90</p>
+        <button>Ver más</button>
+      </div>
+    </div>
+  </section>
+  <section class="story">
+    <div class="story-container">
+        <div class="story-text">
+            <h1>Nuestra Historia</h1>
+            <p>
+                En un mundo saturado de imitaciones, RYNKO emergió como un símbolo de distinción.  
+                Una visión nacida del pulso urbano, refinada por el arte del detalle.  
+                Donde el arte urbano se entrelaza con la elegancia atemporal.
+            </p>
+            <p>
+                No seguimos tendencias. Cultivamos presencia.  
+                Nos inspira la armonía entre lo caótico y lo sutil:  
+                el detalle que impacta, la actitud que trasciende.
+            </p>
+            <p>
+                Cada prenda que creamos no solo viste: conecta.  
+                Con espíritus que comprenden que el verdadero estilo no se impone —se emana.
+            </p>
+            <p>
+                RYNKO no es simplemente una marca.  
+                Es un manifiesto silencioso, una firma invisible, un código entre quienes no necesitan explicaciones.
+            </p>
+        </div>
+        <div class="story-image">
+            <img src="your-image-path.jpg" alt="Imagen representativa de la historia de RYNKO">
+        </div>
+    </div>
+</section>
+
+  <footer>
+    <p>© 2025 RYNKO. Todos los derechos reservados.</p>
+    <div class="redes">
+      <a href="#">Instagram</a> |
+      <a href="#">TikTok</a> |
+      <a href="#">Contacto</a>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+    });
+
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const url = this.getAttribute('href');
+        if (url && !url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = url;
+          }, 500);
+        }
+      });
+    });
+  </script>
+  
+</body>
+</html>

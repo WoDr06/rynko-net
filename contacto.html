@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Contacto - RYNKO</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <div class="logo">RYNKO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  <section id="contacto" class="contacto">
+    <div class="contacto-container">
+        <h2>Contacto</h2>
+        <p>Si tienes alguna pregunta o comentario, no dudes en ponerte en contacto con nosotros. Estaremos encantados de responderte.</p>
+        
+        <form action="enviarFormulario.php" method="post" class="contacto-form">
+            <div class="form-group">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+            </div>
+            
+            <button type="submit">Enviar Mensaje</button>
+        </form>
+
+        <div class="contacto-info">
+            <h3>Redes Sociales</h3>
+            <p>Síguenos en nuestras redes sociales para estar al tanto de las últimas colecciones y noticias.</p>
+            <div class="social-media">
+                <a href="https://www.instagram.com/w_6odarr/" target="_blank">Instagram</a>
+                <a href="https://www.facebook.com/tuinsta" target="_blank">Facebook</a>
+            </div>
+        </div>
+    </div>
+</section>
+  <script>
+    // Suaviza la entrada
+    document.addEventListener("DOMContentLoaded", () => {
+      document.body.classList.remove("fade-out");
+    });
+  
+    // Suaviza la salida
+    document.querySelectorAll('a[href]').forEach(link => {
+      link.addEventListener('click', function (e) {
+        const url = this.getAttribute('href');
+        if (url && !url.startsWith('#') && !url.startsWith('mailto:') && !url.startsWith('tel:')) {
+          e.preventDefault();
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = url;
+          }, 500); // Tiempo que coincide con el CSS
+        }
+      });
+    });
+  </script>
+</body>
+</html>
