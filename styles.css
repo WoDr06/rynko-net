@@ -249,6 +249,22 @@ footer .redes a:hover {
 @media (max-width: 768px) {
   .story-container {
       flex-direction: column;
+      padding: 10px 5%;
+  }
+  .logo {
+    font-size: 32px;  /* Reduce el tamaño del logo */
+    margin-left: 0;   /* Alineación automática */
+    margin-bottom: 20px;
+  }
+  nav ul {
+    display: flex;
+    flex-direction: column; /* Apila los elementos verticalmente */
+    gap: 15px; /* Espacio más pequeño entre los links */
+    align-items: center;
+  }
+
+  nav a {
+    font-size: 14px; /* Ajuste de fuente para que quepa mejor */
   }
 
   .story-text {
@@ -260,19 +276,27 @@ footer .redes a:hover {
       max-width: 100%;
       margin-top: 20px;
   }
+  .hero {
+    height: auto;
+    padding: 4rem 10px;
+  }
 
   .hero h1 {
       font-size: 2rem;
   }
 
   .hero p {
-      font-size: 36px;
+      font-size: 40px;
   }
-
+  .btn {
+    padding: 10px 25px;  /* Hacer los botones un poco más pequeños */
+  }
   .grid-productos {
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   }
-
+  .productos {
+    padding: 40px 5%;
+    
   .producto h3 {
       font-size: 1rem;
   }
