@@ -1,199 +1,200 @@
+*/* Estilos generales para la estructura */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-  html {
-    scroll-behavior: smooth;
-  }
-  
-  body {
-    font-family: 'Outfit', sans-serif;
-    background-color: #ffffff;
-    color: #000000;
-    opacity: 1;
-    transition: opacity 0.5s ease-in-out;
-  }
-  
-  body.fade-out {
-    opacity: 0;
-  }
-  
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 5%;
-    background-color: #ffffff;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-  }
-  
-  .logo {
-    font-size: 48px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #000000;
-    text-align: center;
-    flex-grow: 1;
-    margin-left: 305px;
-  }
-  
-  nav ul {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-  }
-  
-  nav a {
-    color: #000000;
-    text-decoration: none;
-    transition: color 0.3s;
-  }
-  
-  nav a:hover {
-    color: #8e948e;
-  }
-  
-  .hero {
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    padding: 2rem;
-    color: white;
-  }
-  
-  .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.4);
-    z-index: 1;
-  }
-  
-  .hero-contenido {
-    position: relative;
-    z-index: 2;
-    max-width: 800px;
-  }
-  
-  .hero h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-  }
-  
-  .hero p {
-    font-weight: 800;
-    font-size: 60px;
-    margin-bottom: 60px;
-    text-transform: uppercase;
-  }
-  
-  .btn {
-    background-color: #ffffff;
-    color: #000000;
-    padding: 12px 30px;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.3s ease;
-  }
-  
-  .btn:hover {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  
-  .productos {
-    padding: 60px 5%;
-    text-align: center;
-  }
-  
-  .productos h2 {
-    font-size: 2rem;
-    margin-bottom: 40px;
-  }
-  
-  .grid-productos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 30px;
-  }
-  
-  .producto {
-    background-color: #eff0e4;
-    border-radius: 12px;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  .producto img {
-    width: 100%;
-    border-radius: 12px;
-    margin-bottom: 10px;
-  }
-  
-  .producto h3 {
-    font-size: 1.2rem;
-    margin-bottom: 5px;
-  }
-  
-  .producto p {
-    font-size: 1rem;
-    color: #000000;
-    margin-bottom: 5px;
-  }
-  
-  .producto button {
-    padding: 10px 20px;
-    border: none;
-    background-color: white;
-    color: black;
-    border-radius: 25px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .producto button:hover {
-    background-color: #000000;
-    color: #ffffff;
-  }
-  
-  footer {
-    background-color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-    color: #363636;
-  }
-  
-  footer .redes a {
-    color: #363636;
-    text-decoration: none;
-    margin: 0 10px;
-    transition: color 0.3s;
-  }
-  
-  footer .redes a:hover {
-    color: #000000;
-  }
-  /* Estilos generales para la sección de la historia */
-.story {
-  background-color: #121212; /* Fondo oscuro para mantener la elegancia */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Outfit', sans-serif;
+  background-color: #ffffff;
+  color: #000000;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+}
+
+body.fade-out {
+  opacity: 0;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 5%;
+  background-color: #ffffff;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #000000;
+  text-align: center;
+  flex-grow: 1;
+  margin-left: 260px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  color: #000000;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #8e948e;
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 2rem;
   color: white;
-  padding: 100px 20px; /* Espaciado para dar margen */
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: 1;
+}
+
+.hero-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero p {
+  font-weight: 800;
+  font-size: 60px;
+  margin-bottom: 60px;
+  text-transform: uppercase;
+}
+
+.btn {
+  background-color: #ffffff;
+  color: #000000;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.productos {
+  padding: 60px 5%;
+  text-align: center;
+}
+
+.productos h2 {
+  font-size: 2rem;
+  margin-bottom: 40px;
+}
+
+.grid-productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.producto {
+  background-color: #eff0e4;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+}
+
+.producto img {
+  width: 100%;
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.producto h3 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.producto p {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 5px;
+}
+
+.producto button {
+  padding: 10px 20px;
+  border: none;
+  background-color: white;
+  color: black;
+  border-radius: 25px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.producto button:hover {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+footer {
+  background-color: #ffffff;
+  text-align: center;
+  padding: 30px 20px;
+  color: #363636;
+}
+
+footer .redes a {
+  color: #363636;
+  text-decoration: none;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+footer .redes a:hover {
+  color: #000000;
+}
+
+.story {
+  background-color: #121212;
+  color: white;
+  padding: 100px 20px;
 }
 
 .story-container {
@@ -227,7 +228,6 @@
   margin-bottom: 20px;
 }
 
-/* Imagen de la historia */
 .story-image {
   flex: 1;
   max-width: 50%;
@@ -242,9 +242,8 @@
   transition: transform 0.3s ease-out;
 }
 
-/* Efecto de parallax */
 .story-container:hover .story-image img {
-  transform: scale(1.1); /* La imagen se acerca un poco al hacer hover */
+  transform: scale(1.1);
 }
 
 @media (max-width: 768px) {
@@ -261,7 +260,37 @@
       max-width: 100%;
       margin-top: 20px;
   }
+
+  .hero h1 {
+      font-size: 2rem;
+  }
+
+  .hero p {
+      font-size: 36px;
+  }
+
+  .grid-productos {
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+
+  .producto h3 {
+      font-size: 1rem;
+  }
+
+  .producto p {
+      font-size: 0.9rem;
+  }
+
+  .producto button {
+      font-size: 14px;
+  }
+
+  footer {
+      padding: 20px 10px;
+  }
 }
+
+/* Contacto */
 .contacto {
   background-color: #f8f8f8;
   padding: 50px 0;
