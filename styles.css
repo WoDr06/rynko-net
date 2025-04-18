@@ -223,7 +223,7 @@ footer .redes a:hover {
 
 .story p {
   font-size: 1.25rem;
-  font-family: 'Monserrat', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -313,7 +313,7 @@ footer .redes a:hover {
       padding: 20px 10px;
   }
 }
-
+}
 /* Contacto */
 .contacto {
   background-color: #f8f8f8;
