@@ -2,14 +2,23 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carrito - RYNKO</title>
-  <link rel="stylesheet" href="carrito.css">
+  <title>Catálogo - RYNKO</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-
-  <!-- Este header siempre se verá -->
   <header>
+    <div class="logo">RYNKO</div>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <a href="carrito.html" class="carrito-icono">
+  <img src="carrito.png" />
+  <span id="contador-carrito">0</span>
+</a>
+
+<header>
     <h1>Tu Carrito</h1>
     <a href="index.html" class="volver">← Seguir comprando</a>
   </header>
@@ -39,6 +48,15 @@
 
     mostrarCarrito();
   </script>
+<script>
+  function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const contador = document.getElementById('contador-carrito');
+    contador.textContent = carrito.length;
+  }
+
+  actualizarContadorCarrito();
+</script>
 
 </body>
 </html>

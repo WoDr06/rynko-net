@@ -13,7 +13,10 @@
         <li><a href="index.html">Inicio</a></li>
         <li><a href="catalogo.html">Catálogo</a></li>
         <li><a href="contacto.html">Contacto</a></li>
-        <li><a href="carrito.html">Carrito</a></li>
+        <a href="carrito.html" class="carrito-icono">
+  <img src="carrito.png" />
+  <span id="contador-carrito">0</span>
+</a>
       </ul>
     </nav>
   </header>
@@ -71,5 +74,15 @@
       });
     });
   </script>
+  <script>
+  function actualizarContadorCarrito() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    const contador = document.getElementById('contador-carrito');
+    contador.textContent = carrito.length;
+  }
+
+  actualizarContadorCarrito();
+</script>
+
 </body>
 </html>
