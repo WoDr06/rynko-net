@@ -1,27 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Carrito - RYNKO</title>
+  <link rel="stylesheet" href="carrito.css" />
+</head>
 <body>
-  <h1>Carrito</h1>
-  <div id="carrito"></div>
+  <header>
+    <h1>Tu Carrito</h1>
+    <a href="index.html" class="volver">← Seguir comprando</a>
+  </header>
 
-  <script>
-    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
-
-    function mostrarCarrito() {
-      const carritoDiv = document.getElementById('carrito');
-      if (carrito.length === 0) {
-        carritoDiv.innerHTML = '<p>Tu carrito está vacío</p>';
-        return;
-      }
-
-      let html = '<ul>';
-      let total = 0;
-      carrito.forEach(item => {
-        html += `<li>${item.nombre} - $${item.precio}</li>`;
-        total += item.precio;
-      });
-      html += `</ul><p><strong>Total: $${total}</strong></p>`;
-      carritoDiv.innerHTML = html;
-    }
-
-    mostrarCarrito();
-  </script>
+  <main class="carrito-container">
+    <!-- Aquí se van a mostrar los productos con JS -->
+    <div id="items-carrito" class="items-carrito"></div>
+    <div class="resumen">
+      <p>Total: <span id="total">S/ 0.00</span></p>
+      <button class="comprar-btn">Finalizar Compra</button>
+    </div>
+  </main>
 </body>
+</html>

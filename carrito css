@@ -1,0 +1,80 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f6f6f6;
+  color: #333;
+}
+
+header {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  position: relative;
+}
+
+header .volver {
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.carrito-container {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.items-carrito {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.item {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.item img {
+  width: 100px;
+  border-radius: 8px;
+}
+
+.item-info {
+  flex: 1;
+}
+
+.item-info h3 {
+  margin: 0 0 8px;
+}
+
+.resumen {
+  margin-top: 30px;
+  text-align: right;
+}
+
+.resumen p {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.comprar-btn {
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 10px;
+}
