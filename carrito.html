@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Carrito - RYNKO</title>
-  <link rel="stylesheet" href="carrito.css" />
+  <link rel="stylesheet" href="carrito.css">
 </head>
 <body>
+
+  <!-- Este header siempre se verá -->
   <header>
     <h1>Tu Carrito</h1>
     <a href="index.html" class="volver">← Seguir comprando</a>
   </header>
-<div id="carrito" class="carrito-contenido"></div>
-<script>
-  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+
+  <!-- Aquí se mostrará el contenido dinámico -->
+  <div id="carrito" class="carrito-contenido"></div>
+
+  <script>
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
     function mostrarCarrito() {
       const carritoDiv = document.getElementById('carrito');
@@ -37,4 +42,3 @@
 
 </body>
 </html>
- 
