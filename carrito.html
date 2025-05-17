@@ -11,14 +11,30 @@
     <h1>Tu Carrito</h1>
     <a href="index.html" class="volver">← Seguir comprando</a>
   </header>
+<div id="carrito" class="carrito-contenido"></div>
+<script>
+  let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
-  <main class="carrito-container">
-    <!-- Aquí se van a mostrar los productos con JS -->
-    <div id="items-carrito" class="items-carrito"></div>
-    <div class="resumen">
-      <p>Total: <span id="total">S/ 0.00</span></p>
-      <button class="comprar-btn">Finalizar Compra</button>
-    </div>
-  </main>
+    function mostrarCarrito() {
+      const carritoDiv = document.getElementById('carrito');
+      if (carrito.length === 0) {
+        carritoDiv.innerHTML = '<p>Tu carrito está vacío</p>';
+        return;
+      }
+
+      let html = '<ul>';
+      let total = 0;
+      carrito.forEach(item => {
+        html += `<li>${item.nombre} - S/ ${item.precio.toFixed(2)}</li>`;
+        total += item.precio;
+      });
+      html += `</ul><p><strong>Total: S/ ${total.toFixed(2)}</strong></p>`;
+      carritoDiv.innerHTML = html;
+    }
+
+    mostrarCarrito();
+  </script>
+
 </body>
 </html>
+ 
